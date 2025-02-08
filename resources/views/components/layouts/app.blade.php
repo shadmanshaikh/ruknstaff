@@ -7,6 +7,8 @@
     <title>{{ isset($title) ? $title.' - '.config('app.name') : config('app.name') }}</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+  
+
 </head>
 <body  class="min-h-screen font-sans antialiased bg-base-200/50 dark:bg-base-200">
 
@@ -47,6 +49,7 @@
                     @endif
                     
                     <x-menu-item title="Dashboard" icon="o-sparkles" link="/" />
+                    <x-menu-item title="Attendance" icon="o-sparkles" link="/attendance" />
                     <x-menu-sub title="Settings" icon="o-cog-6-tooth">
                         <x-menu-item title="Wifi" icon="o-wifi" link="####" />
                         <x-menu-item title="Archives" icon="o-archive-box" link="####" />
