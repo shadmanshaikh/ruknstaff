@@ -16,3 +16,5 @@ Route::get('/logout' , function(){
         'Expires' => 'Fri, 01 Jan 1990 00:00:00 GMT'
     ]);
 });
+
+Volt::route('/leave-request' , 'leave.leave')->middleware('auth');
