@@ -55,7 +55,7 @@ new class extends Component {
 
 <div>
     <!-- HEADER -->
-    <x-header title="Attendance" separator progress-indicator>
+    <x-header title="Add Attendance" separator progress-indicator>
         <x-slot:middle class="!justify-end">
             <x-input placeholder="Search..." wire:model.live.debounce="search" clearable icon="o-magnifying-glass" />
         </x-slot:middle>
@@ -94,7 +94,7 @@ new class extends Component {
             <x-button label="Done" icon="o-check" class="btn-primary" @click="$wire.drawer = false" />
         </x-slot:actions>
     </x-drawer>
-    <h1>hello</h1>
+   
 </div>
 <script>
     window.onload = function() {
