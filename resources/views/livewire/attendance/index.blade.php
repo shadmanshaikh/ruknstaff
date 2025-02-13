@@ -95,7 +95,7 @@ new class extends Component {
         </x-slot:actions>
     </x-drawer>
 </div>
-
+<h1>hello</h1>
 <script>
     window.onload = function() {
         getLocation();
