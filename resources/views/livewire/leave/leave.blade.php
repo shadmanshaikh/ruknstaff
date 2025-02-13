@@ -4,7 +4,7 @@ use App\Models\User;
 use Illuminate\Support\Collection;
 use Livewire\Volt\Component;
 use Mary\Traits\Toast;
-
+use App\Models\Leaverequest;
 new class extends Component {
     use Toast;
 
@@ -36,6 +36,17 @@ new class extends Component {
             ['key' => 'age', 'label' => 'Age', 'class' => 'w-20'],
             ['key' => 'email', 'label' => 'E-mail', 'sortable' => false],
         ];
+    }
+    public function save(){
+
+        Leaverequest::create([
+            'from' => $this->fromDate,
+            'to' => $this->toDate,
+            'reason' => $this->reason,
+            'description' => $this->description
+        ]);
+
+        $this->success('leave request successfully sent');
     }
 
     /**
