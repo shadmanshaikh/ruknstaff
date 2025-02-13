@@ -91,12 +91,12 @@ new class extends Component {
     <x-card class="mt-3">
         <x-input class="" label="Reason for leave" placeholder="eg, I will be attending my sisters wedding in coming week"/>
         <x-textarea class="mt-3" rows="5" placeholder="explaining the reason for leave"/>
-        <x-slot:actions>
-            <x-button label="Cancel" />
-            <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
-        </x-slot:actions>
     </x-form>
-    </x-card>
+</x-card>
+<x-slot:actions>
+    <x-button label="Cancel" />
+    <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
+</x-slot:actions>
     
     <!-- FILTER DRAWER -->
     <x-drawer wire:model="drawer" title="Filters" right separator with-close-button class="lg:w-1/3">
