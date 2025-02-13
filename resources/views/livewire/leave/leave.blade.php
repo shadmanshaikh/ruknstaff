@@ -9,7 +9,7 @@ new class extends Component {
     use Toast;
 
     public string $search = '';
-
+    public $fromDate , $toDate , $reason , $description;
     public bool $drawer = false;
 
     public array $sortBy = ['column' => 'name', 'direction' => 'asc'];
@@ -81,20 +81,19 @@ new class extends Component {
     <x-card>
         <div class="grid lg:grid-cols-2 gap-2">
             <div>
-            <x-datepicker label="From Date" wire:model="myDate1" icon="o-calendar" hint="From Date" />
+                 <x-datepicker label="From Date" wire:model="fromDate" icon="o-calendar" hint="From Date" />
             </div>
             <div>
-            <x-datepicker label="To Date" wire:model="myDate1" icon="o-calendar" hint="To Date"/>
+                 <x-datepicker label="To Date" wire:model="toDate" icon="o-calendar" hint="To Date"/>
             </div>
         </div>
     </x-card>
     <x-card class="mt-3">
-        <x-input class="" label="Reason for leave" placeholder="eg, I will be attending my sisters wedding in coming week"/>
-        <x-textarea class="mt-3" rows="5" placeholder="explaining the reason for leave"/>
+        <x-input class="" wire:model="reason" label="Reason for leave" placeholder="eg, I will be attending my sisters wedding in coming week"/>
+        <x-textarea wire:model="description" class="mt-3" rows="5" placeholder="explaining the reason for leave"/>
     </x-card>
     <x-slot:actions>
-        <x-button label="Cancel" />
-        <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
+        <x-button label="Save" class="btn-primary" type="submit" spinner="save" />
     </x-slot:actions>
 </x-form>
     
