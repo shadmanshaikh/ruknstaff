@@ -94,8 +94,8 @@ new class extends Component {
             <x-button label="Done" icon="o-check" class="btn-primary" @click="$wire.drawer = false" />
         </x-slot:actions>
     </x-drawer>
+    <h1>hello</h1>
 </div>
-<h1>hello</h1>
 <script>
     window.onload = function() {
         getLocation();
