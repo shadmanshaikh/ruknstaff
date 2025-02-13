@@ -77,6 +77,7 @@ new class extends Component {
         </x-slot:actions>
     </x-header>
 
+    <x-form wire:submit="save">
     <x-card>
         <div class="grid lg:grid-cols-2 gap-2">
             <div>
@@ -91,6 +92,11 @@ new class extends Component {
         <x-input class="" label="Reason for leave" placeholder="eg, I will be attending my sisters wedding in coming week"/>
         <x-textarea class="mt-3" rows="5" placeholder="explaining the reason for leave"/>
     </x-card>
+    <x-slot:actions>
+        <x-button label="Cancel" />
+        <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
+    </x-slot:actions>
+</x-form>
     
     <!-- FILTER DRAWER -->
     <x-drawer wire:model="drawer" title="Filters" right separator with-close-button class="lg:w-1/3">
